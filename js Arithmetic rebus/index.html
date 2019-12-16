@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dinaminių interneto svetainių kūrimas</title>
+</head>
+<body>
+    <h1></h1>
+    <p id='results'>Rezultatas: </p>
+    
+    <script type="text/javascript">
+
+    const firstQuestion  = 'Įveskite bet kokį skaičių';
+    const secondQuestion = 'Ar jau šventėte savo gimtadienį?';
+    const thirdQuestion  = 'Jūsų gimimo metai';
+
+    var randomNumber = prompt(firstQuestion);
+    var number       = (confirm(secondQuestion) ? 1769 : 1768);
+    var bdayDate     = prompt(thirdQuestion);
+    var result       = (parseInt(randomNumber) * 2 + 5) * 50 + number - parseInt(bdayDate);
+
+    document.getElementById('results').innerHTML += result;
+    </script>
+</body>
+</html>
